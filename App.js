@@ -1,21 +1,20 @@
+import React from 'react';
+import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Formulario from './src/componetes/login';
+import { styles } from './appStyle';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Formulario/>
+    <SafeAreaProvider>
       <StatusBar style="auto" />
-    </View>
+      <SafeAreaView style={styles.container} edges={['top', 'right', 'bottom', 'left']}>
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}>Login</Text>
+        </View>
+        <Formulario/>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
