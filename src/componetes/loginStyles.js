@@ -49,4 +49,10 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     letterSpacing: 1,
   },
+  linkText: {
+  marginTop: 10,
+  fontSize: 14,
+  color: "#000",
+  textAlign: "center",
+}
 });

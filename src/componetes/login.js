@@ -52,7 +52,9 @@ function Formulario() {
         <Pressable style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>INGRESAR</Text>
         </Pressable>
-      
+         <Text style={styles.linkText}>Olvidaste la clave?</Text>
+
+         <Text style={styles.linkText}>Crear Cuenta</Text>
 
       </View>
     </View>
